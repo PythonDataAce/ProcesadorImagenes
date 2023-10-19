@@ -1,0 +1,107 @@
+Crear un buen README es esencial para cualquier proyecto. Aquí tienes una plantilla para un README básico para tu aplicación de Segmentador de Imágenes:
+
+````markdown
+# Segmentador de Imágenes
+
+Bienvenido al Segmentador de Imágenes, una aplicación que te permite cargar imágenes y realizar operaciones de segmentación.
+
+## Descripción
+
+Esta aplicación web te permite cargar una imagen y aplicar operaciones de segmentación a la misma. Puedes utilizarla para tareas como la separación de objetos de fondo en una imagen o para detectar características específicas en una imagen.
+
+## Características
+
+- Carga de imágenes en varios formatos.
+- Aplicación de algoritmos de segmentación personalizables.
+- Visualización de resultados en tiempo real.
+- Fácil de usar y personalizar.
+
+## Capturas de Pantalla
+
+[Inserta aquí capturas de pantalla de tu aplicación en acción si lo deseas.]
+
+## Instalación
+
+Para ejecutar esta aplicación en tu entorno local, sigue estos pasos:
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone https://github.com/TuUsuario/SegmentadorDeImagenes.git
+   ```
+````
+
+2. Accede al directorio del proyecto:
+
+   ```bash
+   cd SegmentadorDeImagenes
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Inicia la aplicación:
+
+   ```bash
+   python app.py
+   ```
+
+5. Abre tu navegador web y ve a [http://localhost:5000](http://localhost:5000) para acceder a la aplicación.
+
+## Uso
+
+1. Abre la aplicación en tu navegador.
+
+2. Selecciona una imagen para cargar.
+
+3. Configura los parámetros de segmentación según tus necesidades.
+
+4. Haz clic en el botón "Procesar" para ver los resultados.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+
+2. Crea una rama para tu contribución:
+
+   ```bash
+   git checkout -b feature/tu-contribucion
+   ```
+
+3. Realiza tus cambios y asegúrate de seguir las directrices de estilo del proyecto.
+
+4. Haz un commit de tus cambios:
+
+   ```bash
+   git commit -m "Añadida nueva característica: tu-contribucion"
+   ```
+
+5. Envía tus cambios al repositorio:
+
+   ```bash
+   git push origin feature/tu-contribucion
+   ```
+
+6. Abre una solicitud de extracción en el repositorio original.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más información.
+
+## Contacto
+
+- Autor: [Tu Nombre]
+- Correo electrónico: [rimopa93@gmail.com]
+
+---
+
+¡Esperamos que disfrutes utilizando el Segmentador de Imágenes! Si tienes alguna pregunta, problema o sugerencia, no dudes en ponerte en contacto con nosotros.
+
+```
+
+```
