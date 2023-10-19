@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bienvenido al Segmentador de Imágenes</title>
+    <title>Agradecimiento</title>
+    <!-- Agrega la referencia a Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
   </head>
   <body>
-    <h1>Bienvenido al Segmentador de Imágenes</h1>
-    <form method="POST" enctype="multipart/form-data">
-      <input type="file" name="imagen" />
-      <input type="submit" value="Procesar" />
-    </form>
-    {% if error %}
-    <p>{{ error }}</p>
-    {% endif %}
+    <div class="container">
+      <h1 class="mt-5">
+        Segmentación exitosa. Gracias por usar la aplicación.
+      </h1>
+      <p>
+        Las imagenes fueron generadas y se encuentran en la carpeta
+        /uploadas/capas
+      </p>
+      <!-- Corrige la ruta del enlace a la página de inicio -->
+      <a href="{{ url_for('segmentador_imagenes') }}" class="btn btn-primary"
+        >Volver</a
+      >
+
+      {% if error %}
+      <p class="alert alert-danger mt-3">{{ error }}</p>
+      {% endif %}
+    </div>
+    <!-- Agrega la referencia a Bootstrap JS (opcional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

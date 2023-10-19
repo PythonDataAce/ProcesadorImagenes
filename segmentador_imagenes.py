@@ -31,26 +31,28 @@ def segmentar_imagen(imagen_path):
     # Genera capas para cada rango de color
     for i, rango_color in enumerate(rangos_colores):
         # Crea una máscara para el rango de color actual
-        mascara = cv2.inRange(imagen_hsv,
-                              rango_color[0],
-                              rango_color[1])
+        mascara = cv2.inRange(
+            imagen_hsv,
+            rango_color[0],
+            rango_color[1]
+        )
+
+        # Convierte la imagen original a formato RGBA
+        imagen_rgba = cv2.cvtColor(imagen_original,
+                                   cv2.COLOR_BGR2BGRA)
 
         # Aplica la máscara a la imagen original para obtener la capa
-        capa = cv2.bitwise_and(imagen_original,
-                               imagen_original,
+        capa = cv2.bitwise_and(imagen_rgba,
+                               imagen_rgba,
                                mask=mascara)
 
-        # Convierte la capa a formato RGBA
-        capa_rgba = cv2.cvtColor(capa,
-                                 cv2.COLOR_BGR2BGRA)
-
         # Establece los píxeles negros como transparentes
-        capa_rgba[mascara == [0]] = [0, 0, 0, 0]
+        capa[mascara == [0]] = [0, 0, 0, 0]
 
         # Agrega la capa a la lista
-        capas.append(capa_rgba)
+        capas.append(capa)
 
         # Guarda cada capa como una imagen separada en el directorio 'uploads/capas'
-        cv2.imwrite(f'uploads/capas/capa{i +1}.png', capa_rgba)
+        cv2.imwrite(f'uploads/capas/capa{i +1}.png', capa)
 
     return capas

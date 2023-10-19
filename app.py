@@ -75,7 +75,7 @@ def segmentador_imagenes():
             return render_template('resultado.html', capas=capas_list)
 
         else:
-            return render_template('index.html', error='Formato de archivo no válido')
+            return render_template('index.html', error='No se ha seleccionado una imagen')
 
     return render_template('index.html', error=None)
 
